@@ -1,0 +1,158 @@
+@media (max-width: 768px) {
+    .projectList {
+        &__section {
+            max-width: 90% !important;
+
+            &__title {
+                text-align: right !important;
+
+                h2 {
+
+                    font-size: 24px !important;
+                }
+
+                span {
+                    font-size: 14px !important;
+                }
+            }
+
+            &__nav {
+                &__navtabs {
+                    margin-top: 20px !important;
+                    gap: 8px !important;
+
+                    &__item {
+                        border-radius: 12px !important;
+                        padding: 3px 8px !important;
+                        background-color: rgba(0, 186, 186, 0.1) !important;
+
+                        img {
+                            display: none;
+                        }
+
+                        span {
+                            font-size: 15px !important;
+                            color: #00BABA !important;
+                            opacity: 100% !important;
+                        }
+
+                        &.active {
+                            background-color: #00BABA !important;
+
+                            span {
+                                color: white !important;
+                            }
+                        }
+                    }
+                }
+
+                &__contents {
+                    padding: 0 !important;
+                    margin-top: 20px !important;
+                    background-color: transparent !important;
+
+                    &__pane {
+                        .card {
+                            padding: 2px 14px !important;
+                            border-bottom: none !important;
+                            background-color: #E7ECF4 !important;
+                            border-radius: 16px;
+                            margin: 10px 0 !important;
+
+                            &.open {
+                                background-color: white !important;
+                            }
+
+                            &__header {
+                                &__title {
+                                    &__text {
+                                        text-align: right !important;
+
+                                        img {
+                                            display: none !important;
+                                        }
+                                    }
+
+                                    &__icon {
+                                        padding: 0 !important;
+                                        border-radius: 0 !important;
+                                        background-color: transparent !important;
+
+                                        &.open {
+                                            background-color: transparent !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &__collapse {
+                                &__body {
+                                    &__mobileSendSuguest {
+                                            display: block !important;
+                                            margin: 15px 0;
+                                            color: #FAFAFA;
+                                            border: none;
+                                            width: 100%;
+                                            background: #00BABA;
+                                            border-radius: 12px;
+                                            padding: 5px;
+                                            font-weight: 200;
+                                            font-family: 'YekanBakh';
+                                    }
+
+                                    &__define {
+                                        padding: 20px !important;
+                                        border: 1px solid #E7ECF4;
+                                        border-radius: 16px;
+                                        margin: 20px auto;
+
+                                        h2 {
+                                            font-size: 16px !important;
+                                            font-weight: 200;
+                                        }
+                                    }
+
+                                    &__summarize {
+                                        display: block !important;
+
+                                        &__block {
+                                            width: 80% !important;
+                                            margin-bottom: 16px;
+                                        }
+                                    }
+
+                                    &__source {
+                                        border: 1px solid #E7ECF4 !important;
+                                        display: block !important;
+
+                                        &__mobileLink {
+                                                display: flex !important;
+                                                font-size: 12px;
+                                                text-align: center;
+                                                color: #6A7D9B;
+                                                justify-content: center;
+                                        }
+
+                                        .source__link {
+                                            align-items: center;
+
+                                            &__content {
+                                                .link {
+                                                    display: none !important;
+                                                }
+                                            }
+                                        }
+
+                                        .source__author {
+                                            display: none !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
