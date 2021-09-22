@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @media (max-width: 768px) {
   .projectList__section {
+    margin-bottom: 50px !important;
     max-width: 90% !important;
   }
   .projectList__section__title {
@@ -141,6 +142,7 @@ body {
   max-width: 70%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 150px;
 }
 .projectList__section__title {
   display: grid;
@@ -328,6 +330,239 @@ body {
   font-size: 16px;
   font-weight: 200;
   color: #6A7D9B;
+}
+
+.courseStructure {
+  background-color: #EEF2F7;
+}
+.courseStructure__section {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: calc(3%);
+  padding-bottom: 150px;
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.courseStructure__section hr {
+  color: #9DB0CB;
+  opacity: 20%;
+  margin-top: -1px;
+}
+.courseStructure__section__title {
+  display: flex;
+  gap: 16px;
+}
+.courseStructure__section__title h2 {
+  font-size: 40px;
+  font-weight: 100;
+  color: #0B3A42;
+}
+.courseStructure__section__description {
+  font-size: 18px;
+  font-weight: 100;
+  color: #155A6D;
+}
+.courseStructure__section__nav__navtabs {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 50px;
+  color: #9DB0CB;
+  font-size: 18px;
+  font-weight: 100;
+}
+.courseStructure__section__nav__navtabs a {
+  cursor: pointer;
+}
+.courseStructure__section__nav__navtabs__item.active {
+  border-bottom: 2.5px solid #20C5BA;
+}
+.courseStructure__section__nav__navtabs__item.active span {
+  color: #042623;
+}
+.courseStructure__section__nav__contents__pane {
+  width: 80%;
+  margin: auto;
+  padding: 35px;
+  box-sizing: border-box;
+  border: 2px solid #20C5BA;
+  margin-top: 40px;
+  border-radius: 16px;
+  background-color: white;
+  min-height: 250px;
+  display: none;
+}
+.courseStructure__section__nav__contents__pane.active {
+  display: block;
+}
+.courseStructure__section__nav__contents__pane__content h2 {
+  font-size: 24px;
+  font-weight: 200;
+  color: #0E7571;
+}
+.courseStructure__section__nav__contents__pane__content p {
+  font-size: 18px;
+  font-weight: 100;
+  color: #697D9A;
+}
+.courseStructure__section__nav__contents__pane__content h3 {
+  font-size: 18px;
+  font-weight: 200;
+  color: #20C5BA;
+}
+
+.submit {
+  background-color: white;
+}
+.submit__section {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: calc(3%);
+  padding-bottom: 150px;
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.submit__section__title {
+  margin-bottom: 45px;
+}
+.submit__section__title h2 {
+  font-size: 24px;
+  font-weight: 200;
+  color: #042623;
+}
+.submit__section__title span {
+  font-size: 16px;
+  font-weight: 100;
+  color: #6E6E6E;
+}
+.submit__section__content__form__field {
+  padding: 20px;
+  background-color: #F5F7FA;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.submit__section__content__form__field h3 {
+  font-size: 22px;
+  font-weight: 100;
+  color: #155A6D;
+}
+.submit__section__content__form__field__personalInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.submit__section__content__form__field__personalInfo__input {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 2.5%;
+  align-items: center;
+}
+.submit__section__content__form__field__personalInfo__input span {
+  font-size: 16px;
+  font-weight: 200;
+  color: #585858;
+}
+.submit__section__content__form__field__personalInfo__input input {
+  border-radius: 12px;
+  border: 1px solid #DBE4F2;
+  width: 75%;
+  padding: 10px;
+}
+.submit__section__content__form__field__resume {
+  display: flex;
+  justify-content: space-around;
+}
+.submit__section__content__form__field__description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+  margin: auto;
+}
+.submit__section__content__form__field__description select {
+  width: 70%;
+  border-radius: 12px;
+  border: none;
+  padding: 10px;
+  background-color: #E7ECF4;
+}
+.submit__section__content__form__field__description__kind {
+  width: 50%;
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+.submit__section__content__form__field__description__level {
+  width: 50%;
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+.submit__section__content__form__field__description__description {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.submit__section__content__form__field__description__description textarea {
+  width: 85%;
+  border-radius: 12px;
+  background-color: white;
+  border: 1px solid #DBE4F2;
+  padding: 15px;
+}
+.submit__section__content__form__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.submit__section__content__form__footer span {
+  font-size: 16px;
+  font-weight: 100;
+  color: #20C5BA;
+}
+.submit__section__content__form__footer button {
+  background-color: #EEF2F7;
+  border-radius: 12px;
+  padding: 5px 70px;
+  border: none;
+  color: #9DB0CB;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "YekanBakh";
+}
+.submit__section__content__form__footer button:hover {
+  background-color: #009191;
+  cursor: pointer;
+  color: white;
+}
+
+footer {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  background-color: #F5F7FA;
+  min-height: 250px;
+  align-items: center;
+  padding-bottom: 150px;
+}
+footer h3 {
+  font-size: 40px;
+  font-weight: 100;
+  color: #042623;
+}
+footer .successProject {
+  display: flex;
+  justify-content: center;
+  gap: calc(100% / 6);
+}
+footer .successProject img {
+  filter: grayscale(100%);
+}
+footer .successProject img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
