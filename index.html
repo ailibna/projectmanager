@@ -34,7 +34,11 @@
                     </div>
                 </nav>
                 <div class="projectList__section__nav__contents">
-                    <div class="projectList__section__nav__contents__pane" id="activeProject">...</div>
+                    <div class="projectList__section__nav__contents__pane" id="activeProject">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quisquam, ipsum alias natus
+                        velit repudiandae earum ullam voluptatem vel, sapiente iste, ipsam deserunt neque nesciunt
+                        reprehenderit asperiores fugit libero iusto.
+                    </div>
                     <div class="projectList__section__nav__contents__pane active" id="doingProject">
                         <div id="accordion">
                             <div class="card">
@@ -283,7 +287,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projectList__section__nav__contents__pane" id="doneProject">...</div>
+                    <div class="projectList__section__nav__contents__pane" id="doneProject">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Ipsa sed ipsam vel! At omnis harum provident sapiente perferendis
+                        enim nihil ex illo recusandae veniam nam, nisi eius repellendus voluptatum neque.</div>
                 </div>
             </div>
             <div class="courseStructure">
@@ -292,16 +298,16 @@
                         <img src="./asset/Group 13591.svg" alt="">
                         <h2>ساختار جلسات</h2>
                     </div>
-                    <span class="courseStructure__section__description">
+                    <p class="courseStructure__section__description">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
                         چاپگرها و
                         متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
                         و
                         کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
-                    </span>
+                    </p>
                     <nav class="courseStructure__section__nav">
                         <div class="courseStructure__section__nav__navtabs" id="courseStructureNavbarTitle">
-                            <a class="courseStructure__section__nav__navtabs__item active" id="toStratgic">
+                            <a class="courseStructure__section__nav__navtabs__item activeCourse" id="toStratgic">
                                 <span>جلسات استراتژی</span>
                             </a>
                             <a class="courseStructure__section__nav__navtabs__item" id="toMangeBase">
@@ -336,9 +342,18 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="courseStructure__section__nav__contents__pane" id="MangeBase">...</div>
-                        <div class="courseStructure__section__nav__contents__pane" id="Plannig">...</div>
-                        <div class="courseStructure__section__nav__contents__pane" id="Product">...</div>
+                        <div class="courseStructure__section__nav__contents__pane" id="MangeBase">Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Unde ut quos expedita fugit soluta modi itaque voluptatem
+                            voluptatum delectus quas earum nobis, dicta consequatur, quo odit, fuga facere sequi beatae.
+                        </div>
+                        <div class="courseStructure__section__nav__contents__pane" id="Plannig">Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Ipsa omnis quia exercitationem placeat iste fugit beatae,
+                            sit eligendi dolore illo, expedita quibusdam enim ducimus aut mollitia vero recusandae
+                            temporibus? Repellat!</div>
+                        <div class="courseStructure__section__nav__contents__pane" id="Product">Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Aperiam sint repellat fuga, labore repudiandae tenetur
+                            laboriosam ullam quae esse nesciunt deleniti corporis doloribus, dignissimos molestiae
+                            aliquid ex, quod fugiat! Voluptate.</div>
                     </div>
                 </div>
             </div>
@@ -349,24 +364,27 @@
                         <span>.در صورتی که مایل باشید می‌توانید از برای ما رزومه بفرستید، لطفا فرم زیر را پر کنید</span>
                     </div>
                     <div class="submit__section__content">
-                        <form class="submit__section__content__form" action="">
+                        <form class="submit__section__content__form" action="" id="signupNewmemberForm">
                             <div class="submit__section__content__form__field">
                                 <h3>اطلاعات فردی</h3>
                                 <div class="submit__section__content__form__field__personalInfo">
                                     <div class="submit__section__content__form__field__personalInfo__input">
-                                        <span>نام</span>
-                                        <input type="text" placeholder="نام و نام خانوادگی" />
+                                        <span class="inputTiltle">نام</span>
+                                        <span class="requireSign">*</span>
+                                        <input onchange="filledInputCheck()()" type="text" placeholder="نام و نام خانوادگی" required />
                                     </div>
                                     <div class="submit__section__content__form__field__personalInfo__input">
-                                        <span>تلفن</span>
-                                        <input type="number" placeholder="0952654484" />
+                                        <span class="inputTiltle">تلفن</span>
+                                        <span class="requireSign">*</span>
+                                        <input onchange="filledInputCheck()()" type="number" placeholder="0952654484" required />
                                     </div>
                                     <div class="submit__section__content__form__field__personalInfo__input">
-                                        <span>ایمیل</span>
-                                        <input type="email" placeholder="example@email.com" />
+                                        <span class="inputTiltle">ایمیل</span>
+                                        <span class="requireSign">*</span>
+                                        <input onchange="filledInputCheck()()" type="email" placeholder="example@email.com" required />
                                     </div>
                                     <div class="submit__section__content__form__field__personalInfo__input">
-                                        <span>نام شرکت</span>
+                                        <span class="inputTiltle">نام شرکت</span>
                                         <input type="text" placeholder="نام شرکت یا سازمان" />
                                     </div>
                                 </div>
@@ -375,12 +393,39 @@
                                 <h3>سوابق اجرایی</h3>
                                 <div class="submit__section__content__form__field__resume">
                                     <div class="submit__section__content__form__field__resume__resumeDoc">
-                                        <span>رزومه</span>
-                                        <input type="file" id="resumeDoc" name="resumeDoc">
+                                        <div class="uploadInputField">
+                                            <div class="uploadInputField__contetn">
+                                                <div class="reqireInputHandler">
+                                                    <span class="inputTiltle">رزومه</span>
+                                                    <span class="requireSign">*</span>
+                                                </div>
+                                                <div class="uploadFile" id="resumeDocUploadedFile">
+                                                    <span class="uploadFile__filename" id="resumeDocName"></span>
+                                                    <label for="resumeDoc" class="uploadFile__button">
+                                                        pdf انتخاب فایل
+                                                    </label>
+                                                    <input onchange="resumDocSizeCheck()" type="file" id="resumeDoc"
+                                                        name="resumeDoc" required>
+                                                </div>
+                                            </div>
+                                            <span id="uploadResumeDocNotif" class="uploadFileNotif">حداکثر حجم مجاز فایل 1 مگابایت باشد</span>
+                                        </div>
                                     </div>
                                     <div class="submit__section__content__form__field__resume__potfolio">
-                                        <span>پورتفولیو</span>
-                                        <input type="file" id="potfolio" name="potfolio">
+                                        <div class="uploadInputField">
+                                            <div class="uploadInputField__contetn">
+                                                <span class="inputTiltle">پورتفولیو</span>
+                                                <div class="uploadFile" id="portfolioUploadedFile">
+                                                    <span class="uploadFile__filename" id="potfolioName"></span>
+                                                    <label for="potfolio" class="uploadFile__button">
+                                                        pdf انتخاب فایل
+                                                    </label>
+                                                    <input onchange="portfolioSizeCheck(this)" type="file" id="potfolio"
+                                                        name="potfolio">
+                                                </div>
+                                            </div>
+                                            <span id="uploadPortfolioNotif" class="uploadFileNotif">حداکثر حجم مجاز فایل 1 مگابایت باشد</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -388,8 +433,9 @@
                                 <h3>توضیحات تکمیلی</h3>
                                 <div class="submit__section__content__form__field__description">
                                     <div class="submit__section__content__form__field__description__kind">
-                                        <span>نوع ابربار</span>
+                                        <span class="inputTiltle">نوع ابربار</span>
                                         <select name="" id="">
+                                            <option hidden selected></option>
                                             <option value="">ابریار کوچ ابری</option>
                                             <option value="">ابریار فنی</option>
                                             <option value="">ابریار بازارچه</option>
@@ -398,8 +444,9 @@
                                         </select>
                                     </div>
                                     <div class="submit__section__content__form__field__description__level">
-                                        <span>سطح ابریار</span>
+                                        <span class="inputTiltle">سطح ابریار</span>
                                         <select name="" id="">
+                                            <option hidden selected></option>
                                             <option value="">سطح 1</option>
                                             <option value="">سطح 2</option>
                                             <option value="">سطح 3</option>
@@ -407,15 +454,15 @@
                                         </select>
                                     </div>
                                     <div class="submit__section__content__form__field__description__description">
-                                        <span>توضیحات</span>
+                                        <span class="inputTiltle">توضیحات</span>
                                         <textarea name="" id="" cols="30" rows="10"
                                             placeholder="در صورتی نیاز به توضیحات تکمیلی لطفا در این باکس برای ما یادداشت بگذارید"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit__section__content__form__footer">
-                                <span>پر کردن فیلدهایی که با ستاره مشخص شده ضروری است</span>
-                                <button>ثبت نام</button>
+                                <span>* پر کردن فیلدهایی که با ستاره مشخص شده ضروری است</span>
+                                <button id="submitInfoSignupForm" class="submotButton">ثبت نام</button>
                             </div>
                         </form>
                     </div>

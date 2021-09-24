@@ -70,7 +70,8 @@ collapseHandler(coll);
 // add class for show tabs in course structure
 var courseStructureHeader = document.getElementById("courseStructureNavbarTitle");
 var courseStructureItem = courseStructureHeader.getElementsByClassName("courseStructure__section__nav__navtabs__item");
-ActiveClass("active",courseStructureItem)
+ActiveClass("activeCourse",courseStructureItem)
+
 
 // add class for show navbar content course structure
 var element = document.getElementById("toStratgic");
@@ -120,3 +121,57 @@ element.addEventListener("click", function() {
     var pane = document.getElementById("Stratgic");
     pane.classList.remove("active");
 });
+
+// add name of upladed file function
+showUploadedFileName=(inputId,nameToShowID)=>{
+  var fileInput = document.querySelector(inputId);
+  var filenameContainer = document.querySelector(nameToShowID);
+  
+  fileInput.addEventListener('change', function() {
+    filenameContainer.innerText = fileInput.value.split('\\').pop();
+  });
+}
+
+// add name of upladed file for resumeDoc
+showUploadedFileName('#resumeDoc','#resumeDocName')
+
+// add name of upladed file for portfolio
+showUploadedFileName('#potfolio','#potfolioName')
+
+// check all reqire input are fill
+filledInputCheck=()=>{
+  let allAreFilled = false;
+    document.getElementById("signupNewmemberForm").querySelectorAll("[required]").forEach(function(i) {
+      if (!i.value) allAreFilled = true;
+    })
+    if (!allAreFilled) {
+      var pane = document.getElementById("submitInfoSignupForm");
+      pane.classList.add("allFilled");
+    }
+}
+
+// check size of uploaded file
+checkUploadedFile=(inputId,divId,errorShow)=>{
+  const oFile = document.getElementById(inputId).files[0];
+  var uploadFileDive = document.getElementById(divId)
+  var showErrorText = document.getElementById(errorShow)
+
+  if (oFile.size > 1048576) // 1 MiB for bytes.
+  {
+    uploadFileDive.classList.add("sizeError");
+    showErrorText.innerHTML = "فایل بزرگتر از حد مجاز است";
+    showErrorText.classList.add("Error");
+
+  }
+}
+
+// resumeDoc Size Check
+resumDocSizeCheck=()=>{
+  checkUploadedFile("resumeDoc","resumeDocUploadedFile","uploadResumeDocNotif");
+  filledInputCheck();
+}
+
+// portfolio Size Check
+portfolioSizeCheck=()=>{
+  checkUploadedFile("potfolio","portfolioUploadedFile","uploadPortfolioNotif");
+}

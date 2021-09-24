@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @media (max-width: 768px) {
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
   .projectList__section {
     margin-bottom: 50px !important;
     max-width: 90% !important;
@@ -15,7 +23,9 @@
   }
   .projectList__section__nav__navtabs {
     margin-top: 20px !important;
-    gap: 8px !important;
+    padding-bottom: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
   }
   .projectList__section__nav__navtabs__item {
     border-radius: 12px !important;
@@ -114,6 +124,152 @@
   .projectList__section__nav__contents__pane .card__collapse__body__source .source__author {
     display: none !important;
   }
+
+  .courseStructure__section {
+    max-width: 90% !important;
+    padding-bottom: 80px !important;
+  }
+  .courseStructure__section hr {
+    display: none !important;
+  }
+  .courseStructure__section__title h2 {
+    font-size: 24px !important;
+  }
+  .courseStructure__section__description {
+    font-size: 14px !important;
+  }
+  .courseStructure__section__nav__navtabs {
+    width: 100% !important;
+    font-size: 15px !important;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    gap: 30px;
+  }
+  .courseStructure__section__nav__navtabs__item {
+    border-radius: 12px !important;
+    padding: 3px 8px !important;
+    background-color: #D4DFEE !important;
+    color: #697D9A !important;
+  }
+  .courseStructure__section__nav__navtabs__item span {
+    white-space: nowrap;
+  }
+  .courseStructure__section__nav__navtabs__item.activeCourse {
+    background-color: #00BABA !important;
+  }
+  .courseStructure__section__nav__navtabs__item.activeCourse span {
+    color: white !important;
+  }
+  .courseStructure__section__nav__contents__pane {
+    width: 100% !important;
+    padding: 30px !important;
+    margin-top: 24px !important;
+  }
+  .courseStructure__section__nav__contents__pane__content h2 {
+    font-size: 20px !important;
+    font-weight: 200;
+    color: #20C5BA !important;
+  }
+
+  .submit__section {
+    max-width: 90% !important;
+    padding-bottom: 60px !important;
+  }
+  .submit__section__title {
+    margin-bottom: 45px;
+  }
+  .submit__section__title h2 {
+    color: #0B3A42 !important;
+  }
+  .submit__section__title span {
+    font-size: 14px !important;
+    color: #155A6D !important;
+  }
+  .submit__section__content__form__field {
+    background-color: white !important;
+    padding: 0px !important;
+  }
+  .submit__section__content__form__field h3 {
+    border-right: 4px solid #20C5BA;
+    border-radius: 5px 0 0 5px;
+    padding-right: 17px;
+  }
+  .submit__section__content__form__field__personalInfo__input {
+    display: block !important;
+    width: 100% !important;
+    border: 1px solid #DBE4F2;
+    border-radius: 12px;
+    padding: 5px 15px;
+  }
+  .submit__section__content__form__field__personalInfo__input input {
+    display: none !important;
+  }
+  .submit__section__content__form__field__resume .uploadFile {
+    border: none !important;
+  }
+  .submit__section__content__form__field__resume .uploadFileNotif {
+    display: none !important;
+  }
+  .submit__section__content__form__field__resume .reqireInputHandler {
+    display: flex;
+  }
+  .submit__section__content__form__field__resume__resumeDoc {
+    width: 100% !important;
+    border: 1px solid #DBE4F2;
+    border-radius: 12px;
+    padding-right: 5px;
+  }
+  .submit__section__content__form__field__resume__potfolio {
+    border: 1px solid #DBE4F2;
+    border-radius: 12px;
+    padding-right: 5px;
+    width: 100% !important;
+  }
+  .submit__section__content__form__field__description {
+    gap: 5px !important;
+  }
+  .submit__section__content__form__field__description select {
+    width: 60% !important;
+  }
+  .submit__section__content__form__field__description__kind {
+    width: 100% !important;
+    background-color: #E7ECF4 !important;
+    border-radius: 12px;
+    padding-right: 5px;
+  }
+  .submit__section__content__form__field__description__level {
+    width: 100% !important;
+    background-color: #E7ECF4 !important;
+    border-radius: 12px;
+    padding-right: 5px;
+  }
+  .submit__section__content__form__field__description__description {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .submit__section__content__form__field__description__description .inputTiltle {
+    display: none;
+  }
+  .submit__section__content__form__field__description__description textarea::placeholder {
+    color: #9DB0CB !important;
+  }
+  .submit__section__content__form__footer {
+    display: grid !important;
+    gap: 22px !important;
+  }
+
+  footer h3 {
+    font-size: 24px !important;
+    color: #0B3A42 !important;
+  }
+  footer .successProject {
+    flex-wrap: wrap;
+    gap: 0 !important;
+  }
+  footer .successProject img {
+    margin: 15px;
+  }
 }
 @font-face {
   font-family: "YekanBakh";
@@ -130,6 +286,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: "YekanBakh";
+}
+body button:focus {
+  outline: none !important;
 }
 
 .projectList {
@@ -376,10 +535,10 @@ body {
 .courseStructure__section__nav__navtabs a {
   cursor: pointer;
 }
-.courseStructure__section__nav__navtabs__item.active {
+.courseStructure__section__nav__navtabs__item.activeCourse {
   border-bottom: 2.5px solid #20C5BA;
 }
-.courseStructure__section__nav__navtabs__item.active span {
+.courseStructure__section__nav__navtabs__item.activeCourse span {
   color: #042623;
 }
 .courseStructure__section__nav__contents__pane {
@@ -393,6 +552,7 @@ body {
   background-color: white;
   min-height: 250px;
   display: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 .courseStructure__section__nav__contents__pane.active {
   display: block;
@@ -416,6 +576,11 @@ body {
 .submit {
   background-color: white;
 }
+.submit .requireSign {
+  font-size: 16px;
+  font-weight: 200;
+  color: #20C5BA;
+}
 .submit__section {
   padding-right: 15px;
   padding-left: 15px;
@@ -437,6 +602,11 @@ body {
   font-size: 16px;
   font-weight: 100;
   color: #6E6E6E;
+}
+.submit__section__content__form .inputTiltle {
+  font-size: 16px;
+  font-weight: 200;
+  color: #585858;
 }
 .submit__section__content__form__field {
   padding: 20px;
@@ -461,6 +631,12 @@ body {
   margin: 10px 2.5%;
   align-items: center;
 }
+.submit__section__content__form__field__personalInfo__input ::placeholder {
+  font-size: 16px;
+  font-weight: 100;
+  color: #9DB0CB;
+  font-family: "YekanBakh";
+}
 .submit__section__content__form__field__personalInfo__input span {
   font-size: 16px;
   font-weight: 200;
@@ -474,29 +650,126 @@ body {
 }
 .submit__section__content__form__field__resume {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 83%;
+  margin: auto;
+  gap: 40px;
+}
+.submit__section__content__form__field__resume .uploadFile {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #DBE4F2;
+  border-radius: 12px;
+  background: white;
+}
+.submit__section__content__form__field__resume .uploadFile.sizeError {
+  border: 1px solid #F77D7D;
+}
+.submit__section__content__form__field__resume .uploadFile.sizeError .uploadFile__button {
+  color: #FE5959;
+}
+.submit__section__content__form__field__resume .uploadFile input[type=file] {
+  display: none;
+}
+.submit__section__content__form__field__resume .uploadFile__button {
+  padding: 5px 9px;
+  border: 1px solid #DBE4F2;
+  background-color: #EEF2F7;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 200;
+  color: #9DB0CB;
+}
+.submit__section__content__form__field__resume .uploadFile__filename {
+  font-size: 14px;
+  font-weight: 100;
+  color: #20C5BA;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 13ch;
+}
+.submit__section__content__form__field__resume .uploadInputField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.submit__section__content__form__field__resume .uploadInputField__contetn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+.submit__section__content__form__field__resume .uploadInputField .uploadFileNotif {
+  font-size: 14px;
+  font-weight: 100;
+  color: #9DB0CB;
+  width: 100%;
+  text-align: left;
+  margin: 10px 0;
+}
+.submit__section__content__form__field__resume .uploadInputField .uploadFileNotif.Error {
+  color: #FE5959;
+}
+.submit__section__content__form__field__resume__resumeDoc {
+  width: calc( 100% / 2 - 20px );
+}
+.submit__section__content__form__field__resume__potfolio {
+  width: calc( 100% / 2 - 20px );
 }
 .submit__section__content__form__field__description {
   display: flex;
   flex-wrap: wrap;
   width: 83%;
   margin: auto;
+  gap: 40px;
+  justify-content: space-between;
+  gap: 40px;
 }
 .submit__section__content__form__field__description select {
-  width: 70%;
+  width: 75%;
   border-radius: 12px;
   border: none;
   padding: 10px;
   background-color: #E7ECF4;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../asset/Component 20 – 27.svg");
+  background-repeat: no-repeat;
+  background-position-x: 5%;
+  background-position-y: 50%;
+  font-size: 16px;
+  color: #6A7D9B;
+  font-weight: 100;
+  font-family: "YekanBakh";
+}
+.submit__section__content__form__field__description select:focus-visible {
+  outline: none !important;
+}
+.submit__section__content__form__field__description option {
+  background-color: white;
+  border: 2px solid #D5DDE7;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 16px;
+  color: #6A7D9B;
+  font-weight: 100;
+  font-family: "YekanBakh";
 }
 .submit__section__content__form__field__description__kind {
-  width: 50%;
+  width: calc( 100% / 2 - 20px );
   display: flex;
   gap: 15px;
   margin: 10px 0;
+  align-items: center;
 }
 .submit__section__content__form__field__description__level {
-  width: 50%;
+  align-items: center;
+  width: calc( 100% / 2 - 20px );
   display: flex;
   gap: 15px;
   margin: 10px 0;
@@ -512,6 +785,10 @@ body {
   background-color: white;
   border: 1px solid #DBE4F2;
   padding: 15px;
+  font-size: 16px;
+  color: #9DB0CB;
+  font-family: "YekanBakh";
+  font-weight: 100;
 }
 .submit__section__content__form__footer {
   display: flex;
@@ -532,8 +809,12 @@ body {
   font-weight: 200;
   font-family: "YekanBakh";
 }
+.submit__section__content__form__footer button.submotButton.allFilled {
+  background-color: #1FC5B9;
+  color: white;
+}
 .submit__section__content__form__footer button:hover {
-  background-color: #009191;
+  background-color: #009191 !important;
   cursor: pointer;
   color: white;
 }

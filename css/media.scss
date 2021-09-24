@@ -1,4 +1,13 @@
 @media (max-width: 768px) {
+    * {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
     .projectList {
         &__section {
             margin-bottom: 50px !important;
@@ -20,7 +29,9 @@
             &__nav {
                 &__navtabs {
                     margin-top: 20px !important;
-                    gap: 8px !important;
+                    padding-bottom: 15px;
+                    overflow-x: auto;
+                    white-space: nowrap;
 
                     &__item {
                         border-radius: 12px !important;
@@ -89,16 +100,16 @@
                             &__collapse {
                                 &__body {
                                     &__mobileSendSuguest {
-                                            display: block !important;
-                                            margin: 15px 0;
-                                            color: #FAFAFA;
-                                            border: none;
-                                            width: 100%;
-                                            background: #00BABA;
-                                            border-radius: 12px;
-                                            padding: 5px;
-                                            font-weight: 200;
-                                            font-family: 'YekanBakh';
+                                        display: block !important;
+                                        margin: 15px 0;
+                                        color: #FAFAFA;
+                                        border: none;
+                                        width: 100%;
+                                        background: #00BABA;
+                                        border-radius: 12px;
+                                        padding: 5px;
+                                        font-weight: 200;
+                                        font-family: 'YekanBakh';
                                     }
 
                                     &__define {
@@ -127,11 +138,11 @@
                                         display: block !important;
 
                                         &__mobileLink {
-                                                display: flex !important;
-                                                font-size: 12px;
-                                                text-align: center;
-                                                color: #6A7D9B;
-                                                justify-content: center;
+                                            display: flex !important;
+                                            font-size: 12px;
+                                            text-align: center;
+                                            color: #6A7D9B;
+                                            justify-content: center;
                                         }
 
                                         .source__link {
@@ -153,6 +164,202 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .courseStructure {
+        &__section {
+            max-width: 90% !important;
+            padding-bottom: 80px !important;
+
+            hr {
+                display: none !important;
+            }
+
+            &__title {
+                h2 {
+                    font-size: 24px !important;
+                }
+            }
+
+            &__description {
+                font-size: 14px !important;
+            }
+
+            &__nav {
+                &__navtabs {
+                    width: 100% !important;
+                    font-size: 15px !important;
+                    overflow-x: auto;
+                    padding-bottom: 15px;
+                    gap: 30px;
+
+                    &__item {
+                        border-radius: 12px !important;
+                        padding: 3px 8px !important;
+                        background-color: #D4DFEE !important;
+                        color: #697D9A !important;
+
+                        span {
+                            white-space: nowrap;
+                        }
+
+                        &.activeCourse {
+                            background-color: #00BABA !important;
+
+                            span {
+                                color: white !important;
+                            }
+                        }
+                    }
+                }
+
+                &__contents {
+                    &__pane {
+                        width: 100% !important;
+                        padding: 30px !important;
+                        margin-top: 24px !important;
+
+                        &__content {
+                            h2 {
+                                font-size: 20px !important;
+                                font-weight: 200;
+                                color: #20C5BA !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .submit {
+        &__section {
+            max-width: 90% !important;
+            padding-bottom: 60px !important;
+
+            &__title {
+                margin-bottom: 45px;
+
+                h2 {
+                    color: #0B3A42 !important;
+                }
+
+                span {
+                    font-size: 14px !important;
+                    color: #155A6D !important;
+                }
+            }
+
+            &__content {
+                &__form {
+                    &__field {
+                        background-color: white !important;
+                        padding: 0px !important;
+
+                        h3 {
+                            border-right: 4px solid #20C5BA;
+                            border-radius: 5px 0 0 5px;
+                            padding-right: 17px;
+                        }
+
+                        &__personalInfo {
+                            &__input {
+                                display: block !important;
+                                width: 100% !important;
+                                border: 1px solid #DBE4F2;
+                                border-radius: 12px;
+                                padding: 5px 15px;
+
+                                input {
+                                    display: none !important;
+                                }
+                            }
+                        }
+
+                        &__resume {
+                            .uploadFile {
+                                border: none !important;
+                            }
+                            .uploadFileNotif{
+                                display: none !important;
+                            }
+                            .reqireInputHandler{
+                                display: flex;
+                            }
+                            &__resumeDoc {
+                                width: 100% !important;
+                                border: 1px solid #DBE4F2;
+                                border-radius: 12px;
+                                padding-right: 5px;
+                            }
+
+                            &__potfolio {
+                                border: 1px solid #DBE4F2;
+                                border-radius: 12px;
+                                padding-right: 5px;
+                                width: 100% !important;
+                            }
+                        }
+
+                        &__description {
+                            gap: 5px !important;
+
+                            select {
+                                width: 60% !important;
+                            }
+
+                            &__kind {
+                                width: 100% !important;
+                                background-color: #E7ECF4 !important;
+                                border-radius: 12px;
+                                padding-right: 5px;
+                            }
+
+                            &__level {
+                                width: 100% !important;
+                                background-color: #E7ECF4 !important;
+                                border-radius: 12px;
+                                padding-right: 5px;
+                            }
+
+                            &__description {
+                                width: 100%;
+                                display: flex;
+                                gap: 10px;
+
+                                .inputTiltle {
+                                    display: none;
+                                }
+
+                                textarea {
+                                    &::placeholder {
+                                        color: #9DB0CB !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &__footer {
+                        display: grid !important;
+                        gap: 22px !important;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        h3{
+            font-size: 24px !important;
+            color: #0B3A42 !important;
+        }
+        .successProject{
+            flex-wrap: wrap;
+            gap: 0 !important;
+            img{
+                margin: 15px;
             }
         }
     }

@@ -21,6 +21,12 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'YekanBakh';
+
+    button {
+        &:focus {
+            outline: none !important;
+        }
+    }
 }
 
 .projectList {
@@ -324,7 +330,7 @@ body {
                 }
 
                 &__item {
-                    &.active {
+                    &.activeCourse {
                         border-bottom: 2.5px solid #20C5BA;
 
                         span {
@@ -346,6 +352,7 @@ body {
                     background-color: white;
                     min-height: 250px;
                     display: none;
+                    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
 
                     &.active {
                         display: block;
@@ -378,7 +385,11 @@ body {
 
 .submit {
     background-color: white;
-
+    .requireSign{
+        font-size: 16px;
+        font-weight: 200;
+        color: #20C5BA;
+    }
     &__section {
         padding-right: 15px;
         padding-left: 15px;
@@ -406,6 +417,11 @@ body {
 
         &__content {
             &__form {
+                .inputTiltle{
+                    font-size: 16px;
+                    font-weight: 200;
+                    color: #585858;
+                }
                 &__field {
                     padding: 20px;
                     background-color: #F5F7FA;
@@ -429,6 +445,12 @@ body {
                             justify-content: space-between;
                             margin: 10px 2.5%;
                             align-items: center;
+                            ::placeholder{
+                                font-size: 16px;
+                                font-weight: 100;
+                                color: #9DB0CB;
+                                font-family: 'YekanBakh';
+                            }
 
                             span {
                                 font-size: 16px;
@@ -447,7 +469,78 @@ body {
 
                     &__resume {
                         display: flex;
-                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        width: 83%;
+                        margin: auto;
+                        gap: 40px;
+                        .uploadFile{
+                            &.sizeError{
+                                border: 1px solid #F77D7D;
+                                .uploadFile__button{
+                                    color: #FE5959;
+                                }
+                            }
+                            input[type="file"] {
+                                display: none;
+                            }
+                            width: 80%;
+                            display: flex;
+                            justify-content: space-between;
+                            border: 1px solid #DBE4F2;
+                            border-radius: 12px;
+                            background: white;
+                            &__button{
+                                padding: 5px 9px;
+                                border: 1px solid #DBE4F2;
+                                background-color: #EEF2F7;
+                                border-radius: 12px;
+                                font-size: 16px;
+                                font-weight: 200;
+                                color: #9DB0CB;
+                            }
+                            &__filename{
+                                font-size: 14px;
+                                font-weight: 100;
+                                color: #20C5BA;
+                                align-items: center;
+                                display: flex;
+                                padding: 4px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                max-width: 13ch;
+                            }
+                           
+                        }
+                        .uploadInputField{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-direction: column;
+                            &__contetn{
+                                display: flex;
+                                width: 100%;
+                                align-items: center;
+                                gap: 15px;
+                            }
+                            .uploadFileNotif{
+                                font-size: 14px;
+                                font-weight: 100;
+                                color: #9DB0CB;
+                                width: 100%;
+                                text-align: left;
+                                margin: 10px 0;
+                                &.Error{
+                                    color: #FE5959;
+                                }
+                            }
+                        }
+                        &__resumeDoc{
+                            width: calc( 100% / 2 - 20px );
+                            
+                        }
+                        &__potfolio{
+                            width: calc( 100% / 2 - 20px );
+                        }
                     }
 
                     &__description {
@@ -455,24 +548,52 @@ body {
                         flex-wrap: wrap;
                         width: 83%;
                         margin: auto;
+                        gap: 40px;
+                        justify-content: space-between;
+                        gap: 40px;
 
                         select {
-                            width: 70%;
+                            width: 75%;
                             border-radius: 12px;
                             border: none;
                             padding: 10px;
                             background-color: #E7ECF4;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            background-image: url("../asset/Component\ 20\ –\ 27.svg");
+                            background-repeat: no-repeat;
+                            background-position-x: 5%;
+                            background-position-y: 50%;
+                            font-size: 16px;
+                            color: #6A7D9B;
+                            font-weight: 100;
+                            font-family: 'YekanBakh';
+                            &:focus-visible {
+                                outline: none !important;
+                            }
+                        }
+                        option{
+                            background-color: white;
+                            border: 2px solid #D5DDE7;
+                            border-radius: 12px;
+                            padding: 20px;
+                            font-size: 16px;
+                            color: #6A7D9B;
+                            font-weight: 100;
+                            font-family: 'YekanBakh';
                         }
 
                         &__kind {
-                            width: 50%;
+                            width: calc( 100% / 2 - 20px );
                             display: flex;
                             gap: 15px;
                             margin: 10px 0;
+                            align-items: center;
                         }
 
                         &__level {
-                            width: 50%;
+                            align-items: center;
+                            width: calc( 100% / 2 - 20px );
                             display: flex;
                             gap: 15px;
                             margin: 10px 0;
@@ -489,6 +610,10 @@ body {
                                 background-color: white;
                                 border: 1px solid #DBE4F2;
                                 padding: 15px;
+                                font-size: 16px;
+                                color: #9DB0CB;
+                                font-family: 'YekanBakh';
+                                font-weight: 100;
                             }
                         }
                     }
@@ -513,8 +638,15 @@ body {
                         font-size: 16px;
                         font-weight: 200;
                         font-family: "YekanBakh";
-                        &:hover{
-                            background-color: #009191;
+                        &.submotButton{
+                            &.allFilled{
+                                background-color: #1FC5B9;
+                                color: white;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #009191 !important;
                             cursor: pointer;
                             color: white;
                         }
