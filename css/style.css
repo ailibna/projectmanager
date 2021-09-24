@@ -679,8 +679,8 @@ body button:focus {
   border-radius: 12px;
   font-size: 16px;
   font-weight: 200;
-  color: #9DB0CB;
   cursor: pointer;
+  color: #9DB0CB;
 }
 .submit__section__content__form__field__resume .uploadFile__filename {
   font-size: 14px;
