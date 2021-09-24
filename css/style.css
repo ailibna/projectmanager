@@ -680,6 +680,7 @@ body button:focus {
   font-size: 16px;
   font-weight: 200;
   color: #9DB0CB;
+  cursor: pointer;
 }
 .submit__section__content__form__field__resume .uploadFile__filename {
   font-size: 14px;
@@ -716,10 +717,10 @@ body button:focus {
   color: #FE5959;
 }
 .submit__section__content__form__field__resume__resumeDoc {
-  width: calc( 100% / 2 - 20px );
+  width: calc(100% / 2 - 20px);
 }
 .submit__section__content__form__field__resume__potfolio {
-  width: calc( 100% / 2 - 20px );
+  width: calc(100% / 2 - 20px);
 }
 .submit__section__content__form__field__description {
   display: flex;
@@ -761,7 +762,7 @@ body button:focus {
   font-family: "YekanBakh";
 }
 .submit__section__content__form__field__description__kind {
-  width: calc( 100% / 2 - 20px );
+  width: calc(100% / 2 - 20px);
   display: flex;
   gap: 15px;
   margin: 10px 0;
@@ -769,7 +770,7 @@ body button:focus {
 }
 .submit__section__content__form__field__description__level {
   align-items: center;
-  width: calc( 100% / 2 - 20px );
+  width: calc(100% / 2 - 20px);
   display: flex;
   gap: 15px;
   margin: 10px 0;
@@ -809,7 +810,7 @@ body button:focus {
   font-weight: 200;
   font-family: "YekanBakh";
 }
-.submit__section__content__form__footer button.submotButton.allFilled {
+.submit__section__content__form__footer button.submitButton.allFilled {
   background-color: #1FC5B9;
   color: white;
 }

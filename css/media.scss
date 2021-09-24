@@ -282,12 +282,15 @@
                             .uploadFile {
                                 border: none !important;
                             }
-                            .uploadFileNotif{
+
+                            .uploadFileNotif {
                                 display: none !important;
                             }
-                            .reqireInputHandler{
+
+                            .reqireInputHandler {
                                 display: flex;
                             }
+
                             &__resumeDoc {
                                 width: 100% !important;
                                 border: 1px solid #DBE4F2;
@@ -350,15 +353,18 @@
             }
         }
     }
-    footer{
-        h3{
+
+    footer {
+        h3 {
             font-size: 24px !important;
             color: #0B3A42 !important;
         }
-        .successProject{
+
+        .successProject {
             flex-wrap: wrap;
             gap: 0 !important;
-            img{
+
+            img {
                 margin: 15px;
             }
         }

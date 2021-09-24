@@ -385,11 +385,13 @@ body {
 
 .submit {
     background-color: white;
-    .requireSign{
+
+    .requireSign {
         font-size: 16px;
         font-weight: 200;
         color: #20C5BA;
     }
+
     &__section {
         padding-right: 15px;
         padding-left: 15px;
@@ -417,11 +419,12 @@ body {
 
         &__content {
             &__form {
-                .inputTiltle{
+                .inputTiltle {
                     font-size: 16px;
                     font-weight: 200;
                     color: #585858;
                 }
+
                 &__field {
                     padding: 20px;
                     background-color: #F5F7FA;
@@ -445,7 +448,8 @@ body {
                             justify-content: space-between;
                             margin: 10px 2.5%;
                             align-items: center;
-                            ::placeholder{
+
+                            ::placeholder {
                                 font-size: 16px;
                                 font-weight: 100;
                                 color: #9DB0CB;
@@ -473,23 +477,28 @@ body {
                         width: 83%;
                         margin: auto;
                         gap: 40px;
-                        .uploadFile{
-                            &.sizeError{
+
+                        .uploadFile {
+                            &.sizeError {
                                 border: 1px solid #F77D7D;
-                                .uploadFile__button{
+
+                                .uploadFile__button {
                                     color: #FE5959;
                                 }
                             }
+
                             input[type="file"] {
                                 display: none;
                             }
+
                             width: 80%;
                             display: flex;
                             justify-content: space-between;
                             border: 1px solid #DBE4F2;
                             border-radius: 12px;
                             background: white;
-                            &__button{
+
+                            &__button {
                                 padding: 5px 9px;
                                 border: 1px solid #DBE4F2;
                                 background-color: #EEF2F7;
@@ -497,8 +506,10 @@ body {
                                 font-size: 16px;
                                 font-weight: 200;
                                 color: #9DB0CB;
+                                cursor: pointer;
                             }
-                            &__filename{
+
+                            &__filename {
                                 font-size: 14px;
                                 font-weight: 100;
                                 color: #20C5BA;
@@ -509,37 +520,43 @@ body {
                                 text-overflow: ellipsis;
                                 max-width: 13ch;
                             }
-                           
+
                         }
-                        .uploadInputField{
+
+                        .uploadInputField {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             flex-direction: column;
-                            &__contetn{
+
+                            &__contetn {
                                 display: flex;
                                 width: 100%;
                                 align-items: center;
                                 gap: 15px;
                             }
-                            .uploadFileNotif{
+
+                            .uploadFileNotif {
                                 font-size: 14px;
                                 font-weight: 100;
                                 color: #9DB0CB;
                                 width: 100%;
                                 text-align: left;
                                 margin: 10px 0;
-                                &.Error{
+
+                                &.Error {
                                     color: #FE5959;
                                 }
                             }
                         }
-                        &__resumeDoc{
-                            width: calc( 100% / 2 - 20px );
-                            
+
+                        &__resumeDoc {
+                            width: calc(100% / 2 - 20px);
+
                         }
-                        &__potfolio{
-                            width: calc( 100% / 2 - 20px );
+
+                        &__potfolio {
+                            width: calc(100% / 2 - 20px);
                         }
                     }
 
@@ -568,11 +585,13 @@ body {
                             color: #6A7D9B;
                             font-weight: 100;
                             font-family: 'YekanBakh';
+
                             &:focus-visible {
                                 outline: none !important;
                             }
                         }
-                        option{
+
+                        option {
                             background-color: white;
                             border: 2px solid #D5DDE7;
                             border-radius: 12px;
@@ -584,7 +603,7 @@ body {
                         }
 
                         &__kind {
-                            width: calc( 100% / 2 - 20px );
+                            width: calc(100% / 2 - 20px);
                             display: flex;
                             gap: 15px;
                             margin: 10px 0;
@@ -593,7 +612,7 @@ body {
 
                         &__level {
                             align-items: center;
-                            width: calc( 100% / 2 - 20px );
+                            width: calc(100% / 2 - 20px);
                             display: flex;
                             gap: 15px;
                             margin: 10px 0;
@@ -638,8 +657,9 @@ body {
                         font-size: 16px;
                         font-weight: 200;
                         font-family: "YekanBakh";
-                        &.submotButton{
-                            &.allFilled{
+
+                        &.submitButton {
+                            &.allFilled {
                                 background-color: #1FC5B9;
                                 color: white;
                             }
